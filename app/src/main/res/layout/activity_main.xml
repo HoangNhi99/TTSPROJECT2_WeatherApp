@@ -106,6 +106,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="HaNoi"
+                                android:fontFamily="@font/source_serif_pro"
                                 android:textAllCaps="true"
                                 android:textStyle="bold"
                                 android:layout_marginBottom="5dp"
@@ -121,16 +122,17 @@
                             android:textSize="18dp" />
 
                     </LinearLayout>
+
                     <TextView
                         android:id="@+id/tv_degree"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:fontFamily="sans-serif-thin"
+                        android:fontFamily="@font/adamina"
                         android:text="29°C"
-                        android:textStyle="bold"
                         android:textColor="@color/white"
-                        android:textSize="90dp" />
+                        android:textSize="90dp"
+                        android:textStyle="bold" />
 
 
                 </LinearLayout>
@@ -160,7 +162,7 @@
 
                             <ImageView
                                 android:id="@+id/img_weather_pictures"
-                                android:layout_width="50dp"
+                                android:layout_width="match_parent"
                                 android:layout_height="50dp" />
 
                             <Space
@@ -172,14 +174,16 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:textStyle="bold"
-                                android:text="Hn"
+                                android:text="VN"
                                 android:textSize="20dp" />
 
                             <TextView
                                 android:id="@+id/tv_city_name"
                                 android:layout_width="wrap_content"
+                                android:gravity="center"
                                 android:layout_height="wrap_content"
                                 android:textStyle="bold"
+                                android:lines="1"
                                 android:text="City"
                                 android:textSize="14dp" />
 
