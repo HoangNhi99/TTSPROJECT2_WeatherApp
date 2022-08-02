@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/swipe_refresh_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/gradient_bg"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_app"
     tools:context=".view.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -17,9 +17,9 @@
             android:id="@+id/tv_error"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Loi, vui long thu lai"
-            android:padding="15dp"
             android:background="#4DFFFFFF"
+            android:padding="15dp"
+            android:text="Loi, vui long thu lai"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -40,7 +40,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -52,7 +53,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    app:boxStrokeWidth="0dp"
                     app:boxStrokeWidthFocused="0dp"
                     app:endIconMode="clear_text">
 
@@ -60,11 +60,12 @@
                         android:id="@+id/edt_city_name"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:inputType="text"
                         android:background="@drawable/radius"
-                        android:maxLines="1"
+                        android:fontFamily="@font/source_serif_pro"
                         android:hint="City Name"
-                        android:lines="1" />
+                        android:inputType="text"
+                        android:lines="1"
+                        android:maxLines="1" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <ImageView
@@ -80,8 +81,8 @@
                 android:id="@+id/ll_data"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginTop="30dp"
+                android:orientation="vertical"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -101,17 +102,17 @@
                         android:gravity="center"
                         android:orientation="vertical">
 
-                            <TextView
-                                android:id="@+id/address"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="HaNoi"
-                                android:fontFamily="@font/source_serif_pro"
-                                android:textAllCaps="true"
-                                android:textStyle="bold"
-                                android:layout_marginBottom="5dp"
-                                android:textColor="@color/white"
-                                android:textSize="24dp" />
+                        <TextView
+                            android:id="@+id/address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:fontFamily="@font/source_serif_pro"
+                            android:text="Ha Noi"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
 
                         <TextView
                             android:id="@+id/updated_at"
@@ -119,7 +120,7 @@
                             android:layout_height="wrap_content"
                             android:text="28 july 2022, 20:08 PM"
                             android:textColor="@color/white"
-                            android:textSize="18dp" />
+                            android:textSize="16dp" />
 
                     </LinearLayout>
 
@@ -131,7 +132,7 @@
                         android:fontFamily="@font/adamina"
                         android:text="29°C"
                         android:textColor="@color/white"
-                        android:textSize="90dp"
+                        android:textSize="80dp"
                         android:textStyle="bold" />
 
 
@@ -155,15 +156,15 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="#3CF1EBF1"
+                            android:background="@drawable/decord"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="8dp">
 
                             <ImageView
                                 android:id="@+id/img_weather_pictures"
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp" />
+                                android:layout_width="40dp"
+                                android:layout_height="40dp" />
 
                             <Space
                                 android:layout_width="wrap_content"
@@ -173,19 +174,21 @@
                                 android:id="@+id/tv_city_code"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:textStyle="bold"
                                 android:text="VN"
-                                android:textSize="20dp" />
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/tv_city_name"
                                 android:layout_width="wrap_content"
-                                android:gravity="center"
                                 android:layout_height="wrap_content"
-                                android:textStyle="bold"
+                                android:gravity="center"
                                 android:lines="1"
                                 android:text="City"
-                                android:textSize="14dp" />
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -197,14 +200,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="#3CF1EBF1"
+                            android:background="@drawable/decord"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
                                 android:src="@drawable/humidity" />
 
                             <Space
@@ -215,6 +218,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Độ ẩm"
+                                android:textColor="@color/black"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
 
@@ -222,9 +226,10 @@
                                 android:id="@+id/tv_humidity"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="06:40 AM"
-                                android:textStyle="bold"
-                                android:textSize="14dp" />
+                                android:text="20%"
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -236,14 +241,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="#3CF1EBF1"
+                            android:background="@drawable/decord"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
                                 android:src="@drawable/wind" />
 
                             <Space
@@ -254,16 +259,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Độ gió"
-                                android:textStyle="bold"
-                                android:textSize="20dp" />
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/tv_wind_speed"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="06:40 AM"
-                                android:textStyle="bold"
-                                android:textSize="14dp" />
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -283,14 +290,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="#3CF1EBF1"
+                            android:background="@drawable/decord"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
                                 android:src="@drawable/equator" />
 
                             <Space
@@ -301,16 +308,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Vĩ độ"
-                                android:textStyle="bold"
-                                android:textSize="20dp" />
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/tv_lat"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="06:40 AM"
-                                android:textStyle="bold"
-                                android:textSize="14dp" />
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -322,14 +331,14 @@
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
-                            android:background="#3CF1EBF1"
+                            android:background="@drawable/decord"
                             android:gravity="center"
                             android:orientation="vertical"
                             android:padding="8dp">
 
                             <ImageView
-                                android:layout_width="50dp"
-                                android:layout_height="50dp"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
                                 android:src="@drawable/longitude" />
 
                             <Space
@@ -340,16 +349,18 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Kinh độ"
-                                android:textStyle="bold"
-                                android:textSize="20dp" />
+                                android:textColor="@color/black"
+                                android:textSize="20dp"
+                                android:textStyle="bold" />
 
                             <TextView
                                 android:id="@+id/tv_lon"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="06:40 AM"
-                                android:textStyle="bold"
-                                android:textSize="14dp" />
+                                android:textColor="@color/black"
+                                android:textSize="14dp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
